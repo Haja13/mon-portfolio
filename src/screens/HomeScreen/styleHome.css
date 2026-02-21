@@ -1,0 +1,96 @@
+.contentHome {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* Espace équilibré entre image et texte */
+    min-height: 80vh;
+    padding: 0 10%;
+    gap: 50px;
+}
+
+/* --- BLOCK IMAGE --- */
+.image-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%; /* Image ronde pour un look pro */
+    border: 5px solid #00adb5; /* Rappel de ta couleur highlight */
+    box-shadow: 0 10px 30px rgba(0, 173, 181, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.03); /* Petit effet de zoom comme sur tes cartes */
+}
+
+/* --- TEXTE --- */
+.home-text {
+    flex: 1;
+}
+
+.names {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #00adb5;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2;
+}
+
+.description {
+    margin-top: 20px;
+    color: #777;
+    font-size: 1rem;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* --- BOUTONS --- */
+.home-btns {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #00adb5;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #007bff;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #00adb5;
+    border: 2px solid #00adb5;
+}
+
+.btn-secondary:hover {
+    background-color: #00adb5;
+    color: white;
+}

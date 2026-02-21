@@ -1,0 +1,280 @@
+
+.about-page {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    align-items: center; /* <-- aligne l'image verticalement avec le contenu */
+  }
+  
+  .about-image {
+    flex-shrink: 0; /* empêche l'image de rétrécir */
+    display: flex;
+    align-items: center; /* centre l'image dans sa colonne */
+  }
+  
+  .about-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Colonne droite - contenu */
+  .about-content {
+    max-width: 600px;
+  }
+  
+  .intro {
+    font-size: 18px;
+    color: #0073e6;
+    font-weight: 600;
+  }
+  
+  .about-content h2 {
+    font-size: 32px;
+    margin: 10px 0 20px 0;
+  }
+  
+  /* Paragraphe */
+  .paragraphe-about {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* Cartes */
+  .content-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* deux colonnes */
+    gap: 20px;
+  }
+  
+  .cards {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .cards:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 15px;
+    justify-content: flex-start; /* Aligne les logos au début de la carte */
+}
+/* Chaque bloc Image + Nom */
+.skill-item {
+  display: flex;
+  flex-direction: column; /* Force le texte sous l'image */
+  align-items: center;    /* Centre le texte par rapport à l'image */
+  gap: 8px;               /* Espace entre l'image et le nom */
+}
+/* Style des images/logos */
+.skill-item img {
+  width: 50px;            /* Ajustez la taille selon vos besoins */
+  height: 50px;
+  object-fit: contain;
+}
+/* Style du texte sous l'image */
+.skill-item span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+/* Container de la carte Education */
+.education-card {
+  text-align: left; /* Aligne le texte à gauche pour plus de lisibilité */
+  padding: 20px;
+}
+
+.education-item {
+  margin-bottom: 20px;
+  border-left: 2px solid #007bff; /* Petite barre latérale pour le style "timeline" */
+  padding-left: 15px;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.edu-degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 5px 0;
+  color: #333;
+}
+
+.edu-option {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Effet au survol pour l'interactivité */
+.education-item:hover {
+  border-left-color: #0056b3;
+  transition: 0.3s;
+}
+.education-card {
+  /* ... tes styles précédents ... */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+  cursor: pointer; /* Indique que l'élément est interactif */
+}
+
+.education-card:hover {
+  transform: scale(1.05); /* Agrandissement de 5% */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour donner de la profondeur */
+  z-index: 10; /* S'assure que la carte passe au-dessus des autres lors du zoom */
+}
+/* Style de la carte Projets */
+.projects-card {
+  text-align: left;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet Zoom sur la carte entière */
+.projects-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-item {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+.project-tech {
+  font-size: 0.75rem;
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.project-details {
+  margin-top: 5px;
+  padding-left: 20px;
+  font-size: 0.85rem;
+  color: #555;
+  list-style-type: circle;
+}
+
+/* Petit effet au survol d'un projet spécifique */
+.project-item:hover .project-name {
+  color: #007bff;
+  transition: 0.2s;
+}
+/* --- LOTTIE CONTAINER --- */
+.lottie-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+}
+
+.lottie-animation {
+  width: 100%;
+  max-width: 400px;
+  filter: drop-shadow(0 10px 20px rgba(0, 173, 181, 0.2));
+}
+
+/* --- CARDS SYSTEM --- */
+.content-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cards {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Zoom fluide */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.cards:hover {
+  transform: scale(1.08); /* Effet agrandir */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  border-color: #00adb5;
+}
+
+/* --- BUTTONS --- */
+.view-more-btn {
+  margin-top: 15px;
+  background: #00adb5;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.view-more-btn:hover {
+  background: #007bff;
+  transform: translateY(-2px);
+}
+
+/* --- SKILLS LIST --- */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.skill-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
